@@ -15,13 +15,45 @@ html{
     scroll-behavior: smooth;
 }
 
+:root {
+    --color-fondo-claro: #ffffff;
+    --color-texto-claro: #000000;
+    --color-fondo-oscuro: #1e2326;
+    --color-texto-oscuro: #ffffff;
+}
+
+
 
 body {
     max-width: 1200px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
-    background-color: rgb(32, 33, 34);
 }
+
+body.dark {
+    background-color: black;
+    color: white;
+}
+.dark-icon,
+.light-icon {
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.dark-icon {
+    display: none;
+}
+
+.dark-icon:hover,
+.light-icon:hover {
+    background-color: #1CB698;
+    color: white}
 
 header {
     display: flex;
@@ -136,8 +168,8 @@ header.active .menu {
 
 
 .home {
-    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url('./jr2.png');
+    /* background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url('./jr2.png'); */
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -281,6 +313,34 @@ header.active .menu {
     align-items: center;
     gap: 20px;
     padding-top: 65px;
+}
+
+
+/* ---- Iconos Sociales ---- */
+
+
+.social-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-icons a {
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.icon-github {
+    margin-right: 40px;
+}
+
+.icon-linkedin,
+.icon-github {
+    width: 40px; 
+    height: 40px;
 }
 
 
