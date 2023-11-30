@@ -158,6 +158,21 @@ header.active .menu {
     background-color: white; 
 }
 
+.menu a.focused {
+    background-color: #9197B3; 
+    outline: 3px double #56585e;
+}
+
+.menu a.focused box-icon,
+.menu a.focused ion-icon {
+    color: black; 
+}
+
+.menu a.focused span {
+    color: #232425; 
+}
+
+
 .selected {
     background-color: #9197B3; /* Color de fondo cuando está seleccionado */
 

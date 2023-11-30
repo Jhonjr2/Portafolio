@@ -20,21 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 const clickedItem = this; // Almacena el elemento clicado
     
                 // Quita la clase 'selected' de todos los elementos del menú
-                menuItems.forEach(item => item.classList.remove('selected'));
+                menuItems.forEach(item => item.classList.remove('selected', 'focused'));
                 // Agrega la clase 'selected' al elemento clicado
-                clickedItem.classList.add('selected');
+                clickedItem.classList.add('selected', 'focused');
     
-                // Cambia el color del texto del ícono y su texto
-                const icons = clickedItem.querySelectorAll('box-icon, ion-icon');
-                if (icons) {
-                    icons.forEach(icon => {
-                        icon.style.color = '#232425';
-                    });
-                }
-                const text = clickedItem.querySelector('span');
-                if (text) {
-                    text.style.color = '#232425';
-                }
+    
+                
             });
         });
     
@@ -49,6 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btn.addEventListener('click', () => {
             body.classList.toggle('dark')
+            if (icon.name === "sunny-outline" ) {
+                icon.name === '"moon-outline"'
+            }else{
+                icon.name === "sunny-outline"
+            }
+
             
         })
 
@@ -60,4 +57,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });     
     
-
