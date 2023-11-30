@@ -40,10 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btn.addEventListener('click', () => {
             body.classList.toggle('dark')
-            if (icon.name === "sunny-outline" ) {
-                icon.name === '"moon-outline"'
+            if (icon.name == "sunny-outline" ) {
+                icon.name = "moon-outline"
+                console.log(icon.name);
             }else{
-                icon.name === "sunny-outline"
+                icon.name = "sunny-outline"
             }
 
             
