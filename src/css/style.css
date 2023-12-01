@@ -52,8 +52,8 @@ body.dark {
 
 .dark-icon:hover,
 .light-icon:hover {
-    background-color: #1CB698;
-    color: white}
+    color: white
+}
 
 header {
     display: flex;
@@ -75,10 +75,6 @@ img {
     max-height: 100%;
     object-fit: contain;
     display: inline-block;
-}
-
-hr {
-    border: 1px solid #0c0c0c; 
 }
 
 main {
@@ -142,6 +138,10 @@ header.active .menu {
     text-align: center;
 }
 
+.menu .end-icon {
+    padding: auto;
+}
+
 .menu a {
     padding: 7px ; 
     width: 90%;
@@ -154,12 +154,10 @@ header.active .menu {
     color: #9197B3;
 }
 
-.icon:hover {
-    background-color: white; 
-}
+
 
 .menu a.focused {
-    background-color: #9197B3; 
+    background-color: #9197B3;
     outline: 3px double #56585e;
 }
 
@@ -384,7 +382,7 @@ header.active .menu {
     }
 } */
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 701px) {
     /* Pantalla de escritorio */
     header {
        display: flex;
@@ -408,14 +406,23 @@ header.active .menu {
         display: flex;
         flex-direction: column;
         margin-top: 0; 
-        position: none;
-      
+        position: absolute;
+        margin-top: 20px;
+    }
+
+    .menu a {
+        padding: 5px; 
+        width: 90%;
+    }
+
+    .menu .end-icon {
+        margin-top: 25px;
     }
      
     .menu a box-icon,
     .menu a ion-icon {
         font-size: 24px; 
-        color: #333;
+        color: #9197B3; 
         display: flex;
         align-items: center;
         gap: 10px;
@@ -428,6 +435,8 @@ header.active .menu {
         transition: opacity 0.3s ease; 
         position: absolute;
         left: 30px; 
+        margin-left: 15px;
+
     }
 
     .menu:hover a span {
