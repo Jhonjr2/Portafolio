@@ -16,10 +16,7 @@ html{
 }
 
 :root {
-    --color-fondo-claro: #ffffff;
-    --color-texto-claro: #000000;
-    --color-fondo-oscuro: #1e2326;
-    --color-texto-oscuro: #ffffff;
+   ---primary-color: #418FDE;
 }
 
 
@@ -31,7 +28,7 @@ body {
 }
 
 body.dark {
-    background-color: black;
+    background: black;
     color: white;
 }
 .dark-icon,
@@ -178,25 +175,56 @@ header.active .menu {
 
 
 .home {
-    /* background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url('./jr2.png'); */
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgb(50, 60, 65)),
+    url(./fondo.png);
     background-size: cover;
+    height: 100vh;
+    color: #fff;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding-top: 55px;
+
 }
 
-.title-home {
-   text-align: center;
-    font-size: 25px;
-    max-width: 70%;
-}
-
-.lorem-home {
+.home .contenido-banner{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
     text-align: center;
+    border-radius: 40px;
+}
+.home .contenido-banner img{
+    margin-top: 40px;
+    border: 10px solid var(---primary-color);
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+.home .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+.home .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.home .contenido-banner .icons-home a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.home .contenido-banner .icons-home a:hover{
+    background-color: var(---primary-color);
 }
 
 
@@ -211,65 +239,65 @@ header.active .menu {
     padding-top: 80px;
 }
 
-.sobremi{
+.about-me{
     background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
 }
-.sobremi .contenido-seccion{
+.about-me .contenido-seccion{
     max-width: 1100px;
     margin: auto;
 }
-.sobremi h2{
+.about-me h2{
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 
 }
-.sobremi .contenido-seccion p{
+.about-me .contenido-seccion p{
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
 }
-.sobremi .contenido-seccion p span{
-    color: #1CB698;
+.about-me .contenido-seccion p span{
+    color: var(---primary-color);
     font-weight: bold;
 }
-.sobremi .fila{
+.about-me .fila{
     display: flex;
 }
-.sobremi .fila .col
+.about-me .fila .col
 {
     width: 50%;
 }
-.sobremi .fila .col h3{
+.about-me .fila .col h3{
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
-.sobremi .fila .col ul{
+.about-me .fila .col ul{
     list-style: none;
 }
-.sobremi .fila .col ul li{
+.about-me .fila .col ul li{
     margin: 12px 0;
 }
-.sobremi .fila .col ul li strong{
+.about-me .fila .col ul li strong{
     display: inline-block;
-    color: #1CB698;
+    color: var(---primary-color);
     width: 130px;
 }
-.sobremi .fila .col ul li span{
-    background-color: #1CB698;
+.about-me .fila .col ul li span{
+    background-color: var(---primary-color);
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
 }
-.sobremi .fila .col .contenedor-intereses{
+.about-me .fila .col .contenedor-intereses{
     display: flex;
     flex-wrap: wrap;
 }
-.sobremi .fila .col .contenedor-intereses .interes{
+.about-me .fila .col .contenedor-intereses .interes{
     width: 100px;
     height: 100px;
     background-color: #252A2E;
@@ -280,14 +308,14 @@ header.active .menu {
     align-items: center;
     justify-content: center;
     transition: .3s;
-}.sobremi .fila .col .contenedor-intereses .interes:hover{
-    background-color: #1CB698;
+}.about-me .fila .col .contenedor-intereses .interes:hover{
+    background-color: var(---primary-color);
 }
-.sobremi .fila .col .contenedor-intereses .interes i{
+.about-me .fila .col .contenedor-intereses .interes i{
     font-size: 30px;
     margin-bottom: 10px;
 }
-.sobremi button{
+.about-me button{
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
@@ -300,17 +328,17 @@ header.active .menu {
     position: relative;
     z-index: 10;
 }
-.sobremi button .overlay{
+.about-me button .overlay{
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1CB698;
+    background-color: var(---primary-color);
     z-index: -1;
     transition: 1s;
 }
-.sobremi button:hover .overlay{
+.about-me button:hover .overlay{
     width: 100%;
 }
 
@@ -457,5 +485,20 @@ header.active .menu {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    /* ----- Home------ */
+
+    .home {
+        background: none;
+        width: 100%;
+        background-size: 100%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-top: 55px;
+    
     }
 }
