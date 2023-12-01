@@ -66,8 +66,6 @@ header {
     left: 0;
     top: 0;
     width: 100%;
-   
-   
 }
 
 img {
@@ -83,9 +81,9 @@ main {
 }
 
 .logo {
-    font-size: 1.5em;
-    font-weight: bold;
+    width: 95px;  
     padding-left: 4%;
+    
 
 }
 
@@ -99,7 +97,7 @@ main {
 
 
 .menu {
-    padding-top: 3%;
+    padding-top: 5%;
     padding-left: 5%;
     display: flex;
     gap: 10px;
@@ -107,7 +105,7 @@ main {
     flex-direction: column;
     align-items: start;
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 0;
     background-color: #3c3d3ef5; 
     width: 100%;
@@ -138,10 +136,6 @@ header.active .menu {
     text-align: center;
 }
 
-.menu .end-icon {
-    padding: auto;
-}
-
 .menu a {
     padding: 7px ; 
     width: 90%;
@@ -170,9 +164,12 @@ header.active .menu {
     color: #232425; 
 }
 
+.menu .end-icon {
+    padding: auto;
+}
 
 .selected {
-    background-color: #9197B3; /* Color de fondo cuando está seleccionado */
+    background-color: #9197B3; 
 
 }
 
@@ -395,9 +392,14 @@ header.active .menu {
     }
 
     .logo {
-        font-size: 20px;
-        
+        width: 60px ;        
     }
+
+    header.active .logo {
+        width: 95px; 
+    }
+
+    
 
     .menu {
         display: flex;
