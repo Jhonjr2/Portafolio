@@ -10,13 +10,15 @@
     font-family: 'Work Sans';
 
 }
-html{
+
+html {
     /* me permite deslizar cuando hago clic en los links del menu */
     scroll-behavior: smooth;
 }
 
 :root {
-   ---primary-color: #418FDE;
+    ---primary-color: #418FDE;
+    ---secundary-color: #3c3d3ee8;
 }
 
 
@@ -31,6 +33,7 @@ body.dark {
     background: black;
     color: white;
 }
+
 .dark-icon,
 .light-icon {
     cursor: pointer;
@@ -39,8 +42,8 @@ body.dark {
     display: flex;
     align-items: center;
     gap: 10px;
-    text-decoration: none; 
-    font-weight: bold; 
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .dark-icon {
@@ -56,7 +59,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #3c3d3ee8 ; 
+    background-color: var(---secundary-color);
     color: white;
     padding: 10px;
     position: fixed;
@@ -78,20 +81,21 @@ main {
 }
 
 .logo {
-    width: 95px;  
-    padding-left: 4%;
-    
-
+    display: flex;
+    align-items: center;
 }
 
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50px 20px 20px;
+}
 
-.logo2 {
+.logo h1 {
     font-size: 1.5em;
-    font-weight: bold;
-    margin-left: auto;
+    margin: 0;
 }
-
-
 
 .menu {
     padding-top: 5%;
@@ -102,11 +106,11 @@ main {
     flex-direction: column;
     align-items: start;
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
-    background-color: #3c3d3ef5; 
+    background-color: #3c3d3ef5;
     width: 100%;
-    height: 80%;
+    height: 68%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     left: 0;
@@ -114,9 +118,9 @@ main {
 }
 
 .menu a img {
-    width: 24px; 
+    width: 24px;
     height: 24px;
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 header.active .menu {
@@ -134,14 +138,14 @@ header.active .menu {
 }
 
 .menu a {
-    padding: 7px ; 
+    padding: 7px;
     width: 90%;
     border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 10px;
-    text-decoration: none; 
-    font-weight: bold; 
+    text-decoration: none;
+    font-weight: bold;
     color: #9197B3;
 }
 
@@ -154,46 +158,47 @@ header.active .menu {
 
 .menu a.focused box-icon,
 .menu a.focused ion-icon {
-    color: black; 
+    color: black;
 }
 
 .menu a.focused span {
-    color: #232425; 
+    color: #232425;
 }
 
 .menu .end-icon {
-    padding: auto;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .selected {
-    background-color: #9197B3; 
+    background-color: #9197B3;
 
 }
 
 /* ---Section 1 Home --- */
 
-
-
 .home {
-    background: linear-gradient(to top, rgba(30,35,38,.8), rgb(50, 60, 65)),
-    url(./fondo.png);
-    background-size: cover;
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgb(50, 60, 65)),
+        url(./fondo.png);
+    background-size: calc(30vh);
     height: 100vh;
     color: #fff;
     display: flex;
     align-items: center;
-
 }
 
-.home .contenido-banner{
-    padding: 20px;
+.home .container {
+    padding-top: 55px;
     background-color: #1e2326;
     max-width: 350px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
 }
-.home .contenido-banner img{
+
+.home .container img {
     margin-top: 40px;
     border: 10px solid var(---primary-color);
     display: block;
@@ -201,16 +206,19 @@ header.active .menu {
     margin: auto;
     border-radius: 100%;
 }
-.home .contenido-banner h1{
+
+.home .container h1 {
     margin-top: 40px;
     font-size: 42px;
     font-family: 'Righteous';
 }
-.home .contenido-banner h2{
+
+.home .container h2 {
     font-size: 15px;
     font-weight: normal;
 }
-.home .contenido-banner .icons-home a{
+
+.home .container .icons-home a {
     color: #fff;
     display: inline-block;
     text-decoration: none;
@@ -223,7 +231,8 @@ header.active .menu {
     font-size: 20px;
     transition: .3s;
 }
-.home .contenido-banner .icons-home a:hover{
+
+.home .container .icons-home a:hover {
     background-color: var(---primary-color);
 }
 
@@ -239,65 +248,77 @@ header.active .menu {
     padding-top: 80px;
 }
 
-.about-me{
+.about-me {
     background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
 }
-.about-me .contenido-seccion{
+
+.about-me .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.about-me h2{
+
+.about-me h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 
 }
-.about-me .contenido-seccion p{
+
+.about-me .contenido-seccion p {
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
 }
-.about-me .contenido-seccion p span{
+
+.about-me .contenido-seccion p span {
     color: var(---primary-color);
     font-weight: bold;
 }
-.about-me .fila{
+
+.about-me .fila {
     display: flex;
 }
-.about-me .fila .col
-{
+
+.about-me .fila .col {
     width: 50%;
 }
-.about-me .fila .col h3{
+
+.about-me .fila .col h3 {
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
-.about-me .fila .col ul{
+
+.about-me .fila .col ul {
     list-style: none;
 }
-.about-me .fila .col ul li{
+
+.about-me .fila .col ul li {
     margin: 12px 0;
 }
-.about-me .fila .col ul li strong{
+
+.about-me .fila .col ul li strong {
     display: inline-block;
     color: var(---primary-color);
     width: 130px;
 }
-.about-me .fila .col ul li span{
+
+.about-me .fila .col ul li span {
     background-color: var(---primary-color);
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
 }
-.about-me .fila .col .contenedor-intereses{
+
+.about-me .fila .col .contenedor-intereses {
     display: flex;
     flex-wrap: wrap;
 }
-.about-me .fila .col .contenedor-intereses .interes{
+
+.about-me .fila .col .contenedor-intereses .interes {
     width: 100px;
     height: 100px;
     background-color: #252A2E;
@@ -308,14 +329,18 @@ header.active .menu {
     align-items: center;
     justify-content: center;
     transition: .3s;
-}.about-me .fila .col .contenedor-intereses .interes:hover{
+}
+
+.about-me .fila .col .contenedor-intereses .interes:hover {
     background-color: var(---primary-color);
 }
-.about-me .fila .col .contenedor-intereses .interes i{
+
+.about-me .fila .col .contenedor-intereses .interes i {
     font-size: 30px;
     margin-bottom: 10px;
 }
-.about-me button{
+
+.about-me button {
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
@@ -328,7 +353,8 @@ header.active .menu {
     position: relative;
     z-index: 10;
 }
-.about-me button .overlay{
+
+.about-me button .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -338,7 +364,8 @@ header.active .menu {
     z-index: -1;
     transition: 1s;
 }
-.about-me button:hover .overlay{
+
+.about-me button:hover .overlay {
     width: 100%;
 }
 
@@ -368,7 +395,7 @@ header.active .menu {
 
 .social-icons a {
     margin-top: 10px;
-    text-decoration: none;    
+    text-decoration: none;
     color: inherit;
     font-size: 3em;
 }
@@ -405,81 +432,101 @@ header.active .menu {
 } */
 
 @media screen and (min-width: 701px) {
+
     /* Pantalla de escritorio */
     header {
-       display: flex;
-       flex-direction: column;
-       align-items: center; 
-       height: 100vh;
-       width: 10vh;
-       max-width: auto;
-       padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        width: 10vh;
+        max-width: auto;
+        padding-bottom: 15px;
     }
+
     header:hover {
-        width: 25vh; 
+        width: 35vh;
     }
 
     .logo {
-        width: 60px ;        
+        width: 50px;
+    }
+
+    header:not(.active) .logo h1 {
+        display: none;
+    }
+
+    header.active .logo h1 {
+        display: block;
+        font-size: 20px;
     }
 
     header.active .logo {
-        width: 95px; 
+        margin-right: 70%;
     }
 
-    
+
 
     .menu {
         display: flex;
         flex-direction: column;
-        margin-top: 0; 
+        margin-top: 0;
         position: absolute;
-        margin-top: 20px;
+        margin-top: 15px;
+        height: 100%;
+        padding-top: 20px;
     }
 
     .menu a {
-        padding: 5px; 
+        padding: 5px;
         width: 90%;
     }
 
     .menu .end-icon {
+        display: flex;
         margin-top: 25px;
+        flex-direction: column;
     }
-     
+
+    header.active .menu .end-icon {
+        flex-direction: row;
+    }
+
     .menu a box-icon,
     .menu a ion-icon {
-        font-size: 24px; 
-        color: #9197B3; 
+        font-size: 24px;
+        color: #9197B3;
         display: flex;
         align-items: center;
         gap: 10px;
-        
+
     }
 
     .menu a span {
-        font-size: 14px; 
-        opacity: 0; 
-        transition: opacity 0.3s ease; 
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
         position: absolute;
-        left: 30px; 
+        left: 30px;
         margin-left: 15px;
 
     }
 
     .menu:hover a span {
-        opacity: 1; 
+        opacity: 1;
     }
 
     .icon {
         width: auto;
-      
+
     }
 
     main {
         padding: 3% 5%;
-        
-        
+
+
     }
+
     section {
         display: flex;
         flex-direction: column;
@@ -492,13 +539,13 @@ header.active .menu {
     .home {
         background: none;
         width: 100%;
-        background-size: 100%; 
+        background-size: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 20px;
         padding-top: 55px;
-    
+
     }
 }
