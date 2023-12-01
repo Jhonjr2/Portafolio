@@ -67,6 +67,22 @@ function sound(){
 
 }
 
+function initMap() {
+    // Coordenadas del centro de tu país
+    var centroPais = { lat: LATITUD, lng: LONGITUD };
+
+    // Configuración del mapa
+    var mapOptions = {
+      zoom: 6, // Nivel de zoom inicial
+      center: centroPais // Centro del mapa
+    };
+
+    // Crear el mapa
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    // Puedes agregar marcadores, líneas, polígonos, etc. según tus necesidades.
+  }
+
 
 
 async function getApi() {

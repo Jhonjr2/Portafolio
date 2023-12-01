@@ -24,10 +24,12 @@ html {
 
 
 body {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
 }
+
+/* -------Mode Dark--------- */
 
 body.dark {
     background: black;
@@ -55,6 +57,9 @@ body.dark {
     color: white
 }
 
+
+/* -------------Header-------------------- */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -73,11 +78,6 @@ img {
     max-height: 100%;
     object-fit: contain;
     display: inline-block;
-}
-
-main {
-    color: aliceblue;
-    padding-top: 13%;
 }
 
 .logo {
@@ -132,9 +132,9 @@ header.active .menu {
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
-    transition: background-color 0.3s;
     width: 100%;
     text-align: center;
+    
 }
 
 .menu a {
@@ -147,6 +147,8 @@ header.active .menu {
     text-decoration: none;
     font-weight: bold;
     color: #9197B3;
+    transition: 1s;
+
 }
 
 
@@ -176,6 +178,7 @@ header.active .menu {
     background-color: #9197B3;
 
 }
+
 
 /* ---Section 1 Home --- */
 
@@ -242,28 +245,18 @@ header.active .menu {
 .about-me {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
     padding-top: 80px;
-}
-
-.about-me {
     background-color: #1e2326;
-    color: #fff;
-    padding: 50px 20px;
+    color: #fff;   
 }
 
-.about-me .contenido-seccion {
-    max-width: 1100px;
-    margin: auto;
-}
 
 .about-me h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 
 }
 
@@ -278,12 +271,8 @@ header.active .menu {
     font-weight: bold;
 }
 
-.about-me .fila {
-    display: flex;
-}
-
 .about-me .fila .col {
-    width: 50%;
+    width: 100%;
 }
 
 .about-me .fila .col h3 {
@@ -304,13 +293,6 @@ header.active .menu {
     display: inline-block;
     color: var(---primary-color);
     width: 130px;
-}
-
-.about-me .fila .col ul li span {
-    background-color: var(---primary-color);
-    padding: 3px;
-    font-weight: bold;
-    border-radius: 5px;
 }
 
 .about-me .fila .col .contenedor-intereses {
@@ -339,6 +321,18 @@ header.active .menu {
     font-size: 30px;
     margin-bottom: 10px;
 }
+
+.about-me .fila .col .map-container {
+    flex: 1; /* Para ocupar el espacio restante */
+}
+
+.about-me .fila .col .map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+
 
 .about-me button {
     cursor: pointer;
@@ -404,36 +398,10 @@ header.active .menu {
     margin-right: 40px;
 }
 
-
-
-
-/* @media screen and (max-width: 600px) {
-    
-    
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 40px;
-        left: 0;
-        background-color: transparent; 
-        width: 100%;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .icon {
-        width: 100%;
-        text-align: center;
-    }
-
-    header.active .menu {
-        display: flex;
-    }
-} */
+/* -----------Pantalla de escritorio------------- */
 
 @media screen and (min-width: 701px) {
 
-    /* Pantalla de escritorio */
     header {
         display: flex;
         flex-direction: column;
@@ -521,17 +489,13 @@ header.active .menu {
 
     }
 
+    /* -------Main------ */
+
     main {
-        padding: 3% 5%;
-
-
-    }
-
-    section {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        gap:70px;
+        margin-left: 60px;
     }
 
     /* ----- Home------ */
@@ -539,7 +503,6 @@ header.active .menu {
     .home {
         background: none;
         width: 100%;
-        background-size: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -548,4 +511,99 @@ header.active .menu {
         padding-top: 55px;
 
     }
+
+    /* --------About me------------- */
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+        background-color: #1e2326;
+        color: #fff;
+        padding: 50px;   
+    }
+    
+    .about-me h2 {
+        font-size: 48px;
+        font-family: 'Righteous';
+        text-align: center;
+        padding: 20px;
+    
+    }
+    
+    .about-me .contenido-seccion p {
+        font: 18px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .about-me .contenido-seccion p span {
+        color: var(---primary-color);
+        font-weight: bold;
+    }
+    
+    .about-me .fila {
+        display: flex;
+    }
+    
+    .about-me .fila .col {
+        width: 100%;
+    }
+    
+    .about-me .fila .col h3 {
+        font-size: 28px;
+        font-family: 'Righteous';
+        margin-bottom: 25px;
+    }
+    
+    
+    .about-me .fila .col ul li strong {
+        display: inline-block;
+        color: var(---primary-color);
+        width: 130px;
+    }
+    
+    
+    .about-me .fila .col .contenedor-intereses {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+    
+    .about-me .fila .col .contenedor-intereses .interes:hover {
+        background-color: var(---primary-color);
+    }
+    
+    .about-me .fila .col .contenedor-intereses .interes i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .about-me button {
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid #fff;
+        width: fit-content;
+        display: block;
+        margin: 20px auto;
+        padding: 10px 22px;
+        font-size: 16px;
+        color: #fff;
+        position: relative;
+        z-index: 10;
+    }
+    
+    .about-me button .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: var(---primary-color);
+        z-index: -1;
+        transition: 1s;
+    }
+    
+   
 }
