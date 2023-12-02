@@ -1,6 +1,6 @@
 window.scrollTo({
-    top: 0, 
-    behavior: "smooth" 
+    top: 0,
+    behavior: "smooth"
 });
 
 function menu() {
@@ -30,22 +30,59 @@ function menu() {
 };
 
 function skills() {
-   const skill = document.querySelector('.slider-skills');
-   const array = document.querySelector('.slider-skills img')
+    const skill = document.querySelector('.slider-skills');
+    const array = document.querySelectorAll('.slider-skills img')
 
-   const images = Array.from(array).map(element => element.getAttribute('src'));
-   let count = 0;
-   let html = `<img src="${images[count]}" alt="hard skills">`;
-   skill.innerHTML = html;
+    const images = Array.from(array).map(element => element.getAttribute('src'));
+    let count = 0;
+    let html = `<img src="${images[count]}" alt="hard skills">`;
+    skill.innerHTML = html;
+
+    const prev = document.querySelector('.btn-prev');
+    const next = document.querySelector('.btn-next');
+    prev.addEventListener('click', () => { 
+        clearInterval(interval)
+        if (0 < count) {
+            count--;
+        } else {
+            count = images.length-1;
+        }
+        let html = `<img src="${images[count]}" alt="hard skills">`;
+        skill.innerHTML = html;
+    })
+    next.addEventListener('click', () => {
+        clearInterval(interval)
+        if (count < images.length-1) {
+            count++
+        } else {
+            count = 0;
+        }
+        let html = `<img src="${images[count]}" alt="hard skills">`;
+        skill.innerHTML = html;
+    })
+    const interval = setInterval(() => {
+        if (count < images.length-1) {
+            count++
+        } else {
+            count = 0;
+        }
+        let html = `<img src="${images[count]}" alt="hard skills">`;
+        skill.innerHTML = html;
+        
+    }, 2000);
+
+
 
 }
+
+
 
 
 function mode() {
     const body = document.querySelector('body')
     const btn = document.querySelector('.icon-mode')
     const icon = document.querySelector('.icon-mode ion-icon')
-   
+
     btn.addEventListener('click', () => {
         body.classList.toggle('dark')
         if (icon.name === "sunny-outline") {
@@ -56,23 +93,23 @@ function mode() {
     });
 }
 
-function sound(){
-   const btn = document.querySelector('.icon-sound')
-   const icon = document.querySelector('.icon-sound ion-icon')
-   const audio = document.querySelector('.icon-sound audio')
+function sound() {
+    const btn = document.querySelector('.icon-sound')
+    const icon = document.querySelector('.icon-sound ion-icon')
+    const audio = document.querySelector('.icon-sound audio')
 
 
     btn.addEventListener('click', () => {
-      if (icon.name === 'volume-mute-outline') {
-        icon.name = 'volume-high-outline'
-      }else{
-        icon.name = 'volume-mute-outline'
-      }
-      if (audio.paused) {
-        audio.play();
-      }else{
-        audio.pause();
-      }
+        if (icon.name === 'volume-mute-outline') {
+            icon.name = 'volume-high-outline'
+        } else {
+            icon.name = 'volume-mute-outline'
+        }
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
     })
 
 
@@ -84,8 +121,8 @@ function initMap() {
 
     // Configuración del mapa
     var mapOptions = {
-      zoom: 6, // Nivel de zoom inicial
-      center: centroPais // Centro del mapa
+        zoom: 6, // Nivel de zoom inicial
+        center: centroPais // Centro del mapa
     };
 
     // Crear el mapa
@@ -119,7 +156,7 @@ async function main() {
     mode();
     sound();
     efectoHabilidades();
-    
+
 
 }
 

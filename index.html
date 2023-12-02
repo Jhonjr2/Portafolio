@@ -35,17 +35,17 @@
             <h1>Esteban</h1>
         </div>
         <nav class="menu">
-            <a href="#home">
+            <a href="#1">
                 <ion-icon name="home-outline"></ion-icon> <span>Home</span></a>
-            <a href="#About-me">
+            <a href="#2">
                 <ion-icon name="person-outline"></ion-icon><span>About me</span></a>
-            <a href="#skills">
+            <a href="#3">
                 <ion-icon name="construct-outline"></ion-icon><span>Skills</span></a>
-            <a href="#Proyectos">
+            <a href="#4">
                 <ion-icon name="file-tray-full-outline"></ion-icon><span>Proyectos</span></a>
-            <a href="#Educación">
+            <a href="#5">
                 <ion-icon name="school-outline"></ion-icon><span>Educación</span></a>
-            <a href="#Logros">
+            <a href="#6">
                 <ion-icon name="ribbon-outline"></ion-icon><span>Logros</span></a>
             <a href="./src/img/Jhon_Esteban Rangel_cv.pdf" download class="download">
                 <ion-icon name="document-text-outline"></ion-icon><span>Download</span></a>
@@ -72,7 +72,7 @@
 
     <main>
         <!-- SECTION HOME -->
-        <section id="home" class="home">
+        <section id="1" class="home">
             <div class="container">
                 <div class="container-img">
                     <img src="./src/img/jr2.png" alt="jr2">
@@ -86,7 +86,7 @@
                     </p>
                 </div>
                 <div class="icons-home">
-                    <a href="#About me">
+                    <a href="#About-me">
                         <ion-icon name="person-outline"></ion-icon><span></span></a>
                     <a href="#skills">
                         <ion-icon name="construct-outline"></ion-icon><span></span></a>
@@ -101,7 +101,7 @@
         </section>
 
         <!-- SECTION ABOUT ME -->
-        <section id="About-me" class="about-me">
+        <section id="2" class="about-me">
             <div class="contenido-seccion">
                 <h2>Sobre Mí</h2>
                 <p><span>Hola, soy Jhon Esteban Rangel.</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -188,17 +188,18 @@
             </div>
             <!----------- Skills --------->
         </section>
-        <section id="skills" class="skills">
-            <div class="contenido-seccion">
+        <section id="3" class="skills">
                 <h2>Habilidades</h2>
-                <h3>Blandas</h3>
-                <div class="fila">
+                <article class="soft-skills">
+                    <h3>Blandas</h3>
                     <ul>
                         <li>Lorem ipsum dolor sit amet.</li>
                         <li>Lorem ipsum dolor sit amet.</li>
                         <li>Lorem ipsum dolor sit amet.</li>
                         <li>Lorem ipsum dolor sit amet.</li>
                     </ul>
+                </article>
+                <article class="hard-skills">
                     <h3>Duras</h3>
                     <figure class="slider-skills">
                         <img src="./src/icon/Assets-portfolio/skills/JavaScript.png" alt="hard skills">
@@ -206,34 +207,51 @@
                         <img src="./src/icon/Assets-portfolio/skills/css3.png" alt="hard skills">
                         <img src="./src/icon/Assets-portfolio/skills/react.png" alt="hard skills">
                         <img src="./src/icon/Assets-portfolio/skills/nodejs.png" alt="hard skills">
+                        <img src="./src/icon/Assets-portfolio/skills/kotlin.png" alt="hard skills">
                     </figure>
-
-                   
-                </div>
-            </div>
+                    <button class="btn-prev"><</button>
+                    <button class="btn-next">></button>
+                
+                </article>
         </section>
 
         <!-------- Proyectos -------->
-        <section id="Proyectos">
+        <section id="4" class="project">
             <h1>Programador Web Full Stack</h1>
             <h2>Esteban Rangel</h2>
             <p>Egresado del programa de desarrollo web y ciencias de computación de la academia mexicana online
                 "Academlo"</p>
             <img src="./src/img/jr2.png" alt="jr2">
         </section>
-        <section id="Educación">
-            <h1>Programador Web Full Stack</h1>
-            <h2>Esteban Rangel</h2>
-            <p>Egresado del programa de desarrollo web y ciencias de computación de la academia mexicana online
-                "Academlo"</p>
-            <img src="./src/img/jr2.png" alt="jr2">
+
+        <!-------- Educación ------->
+        <section id="5" class="section education">
+            <h2>Educación</h2>
+            <article class="local-education">
+                <h3>Academlo:</h3>
+                <ul>
+                    <li>Programa de desarrollo web full stack.</li>
+                    <li>Programador de front-end con React.</li>
+                    <li>Programador de back-end con node.JS.</li>
+                    <li>Fundamentos de la programación en html, css y JavaScript.</li>
+                </ul>
+            </article>
+            <article class="foreign-education">
+                <h3>Otros:</h3>
+                <ul>
+                    <li>Habilidades de comunicación, servicio al cliente y ventas en Cablenet.</li>
+                    <li>Manejo de la suit ofimatica de microsoft word, excel, powerpoint en Andec.</li>
+                    <li>Mecanografría computacion avanzada en Lidez.</li>
+                    <li>Algoritmo y razonamiento logico.</li>
+                </ul>
+            </article>
         </section>
-        <section id="Logros">
-            <h1>Programador Web Full Stack</h1>
-            <h2>Esteban Rangel</h2>
-            <p>Egresado del programa de desarrollo web y ciencias de computación de la academia mexicana online
-                "Academlo"</p>
-            <img src="./src/img/jr2.png" alt="jr2">
+        <section id="6" class="section achievements">
+            <h1>Logros Destacados</h1>
+            <figure>
+                <img src="./src/icon/Assets-portfolio/aplausos.gif" alt="jr2">
+            </figure>
+            <p>Durante mi proceso educativo en academlo me destaque por obtener siemore calificaciones sobresalientes, por tener liderazgo y trabajar en equipo, asi como tambien por animar al grupo a dar en todo momento lo mejor de si para poder aprobar los retos de programación que se nos asignaban a manera de proyectos.</p>
         </section>
 
     </main>
@@ -248,7 +266,7 @@
     </div>
 
     <footer>
-       
+
     </footer>
 
 </body>
