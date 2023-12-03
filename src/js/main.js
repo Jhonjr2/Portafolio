@@ -93,6 +93,17 @@ function mode() {
     });
 }
 
+function lenguage() {
+    const languageLink = document.querySelector('.language-icon a');
+        
+        languageLink.addEventListener('click', function (event) {
+            event.preventDefault(); // Evita la navegación predeterminada
+            const targetLanguage = this.getAttribute('href');
+            // Puedes realizar acciones adicionales aquí, como almacenar la preferencia del usuario
+            window.location.href = targetLanguage; // Redirige al archivo HTML en inglés
+        });
+}
+
 function sound() {
     const btn = document.querySelector('.icon-sound')
     const icon = document.querySelector('.icon-sound ion-icon')

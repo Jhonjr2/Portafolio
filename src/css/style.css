@@ -29,7 +29,7 @@ body {
     margin: 0 auto;
     font-family: Arial, sans-serif;
     background-color: var(---mode-ligth);
-    color:black;
+    color: black;
 }
 
 
@@ -39,11 +39,12 @@ button {
     color: inherit;
     display: inline-block;
 }
+
 ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
     display: inline-block;
@@ -59,12 +60,12 @@ img {
 }
 
 .section {
-  height: 100vh;
-  padding: 60px 10px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+    height: 100vh;
+    padding: 60px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
@@ -143,25 +144,29 @@ header {
     position: fixed;
     left: 0;
     width: 100%;
-    
+
 }
 
 .dark .menu,
 .dark header {
-    background-color:#252A2E;
+    background-color: #252A2E;
     color: white;
-    
+
 }
 
 .menu a img {
     width: 44px;
     height: 24px;
-    margin-right: 5px;
+    margin-right: 15px;
+}
+
+header.active .menu a img {
+    width: 95px;
 }
 
 header.active .menu {
     display: flex;
-   
+
 }
 
 
@@ -171,7 +176,7 @@ header.active .menu {
     border-radius: 5px;
     width: 90%;
     text-align: center;
-    
+
 }
 
 .menu a {
@@ -205,7 +210,7 @@ header.active .menu {
 }
 
 /* ------- */
-.menu a.focused span { 
+.menu a.focused span {
     color: #232425;
     font-size: 20px;
 }
@@ -237,7 +242,7 @@ main {
 /* ---Section 1 Home --- */
 
 .home {
-   
+
     background-size: calc(30vh);
     height: 100vh;
     color: #fff;
@@ -247,7 +252,7 @@ main {
 
 .dark .home {
     background: linear-gradient(to top, rgba(30, 35, 38, .8), rgb(50, 60, 65)),
-    url(./fondo.png);
+        url(./fondo.png);
 }
 
 .home .container {
@@ -262,6 +267,7 @@ main {
 
 .dark .home .container {
     background-color: #1e2326;
+    color: white;
 }
 
 .home .container img {
@@ -309,8 +315,13 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-top: 15px;
-    color: black;   
+    padding-top: 10px;
+    color: black;
+    margin-left: 25px;
+}
+
+.about-me p {
+    margin-bottom: 20px;
 }
 
 .dark .about-me {
@@ -325,14 +336,16 @@ main {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
-    padding: 20px;
+    padding-bottom: 40px;
 
 }
 
-.about-me .contenido-seccion p {
+.about-me .col p span {
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
+    color: var(---primary-color);
+
 }
 
 .about-me .contenido-seccion p span {
@@ -340,36 +353,37 @@ main {
     font-weight: bold;
 }
 
-.about-me .fila .col {
+.about-me .col {
     width: 100%;
+    margin-bottom: 35px;
 }
 
-.about-me .fila .col h3 {
+.about-me .col h3 {
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
 
-.about-me .fila .col ul {
+.about-me .col ul {
     list-style: none;
 }
 
-.about-me .fila .col ul li {
+.about-me .col ul li {
     margin: 12px 0;
 }
 
-.about-me .fila .col ul li strong {
+.about-me .col ul li strong {
     display: inline-block;
     color: var(---primary-color);
     width: 130px;
 }
 
-.about-me .fila .col .contenedor-intereses {
+.about-me .col .contenedor-intereses {
     display: flex;
     flex-wrap: wrap;
 }
 
-.about-me .fila .col .contenedor-intereses .interes {
+.about-me .col .contenedor-intereses .interes {
     width: 100px;
     height: 100px;
     background-color: white;
@@ -382,20 +396,26 @@ main {
     transition: .3s;
 }
 
-.dark .about-me .fila .col .contenedor-intereses .interes {
+.about-me .col ul li strong {
+    display: inline-block;
+    color: var(---primary-color);
+    width: 130px;
+}
+
+.about-me .col .contenedor-intereses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dark .about-me .col .contenedor-intereses .interes {
     background-color: var(---third-color-dark);
 }
 
-.about-me .fila .col .contenedor-intereses .interes:hover {
+.about-me .col .contenedor-intereses .interes:hover {
     background-color: var(---primary-color);
 }
 
-.about-me .fila .col .contenedor-intereses .interes i {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.about-me .fila .col .map-container iframe {
+.about-me .col .map-container iframe {
     width: 60%;
     height: 350px;
 }
@@ -411,17 +431,18 @@ main {
 
 /* ---- Section 3 skills ---- */
 
-.skills{
-    padding: 50px 20px;
+.skills {
+    padding: 50px 30px;
 }
 
-.skills h2{
+.skills h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 
 }
+
 .hard-skills {
     position: relative;
     height: 40%;
@@ -464,11 +485,21 @@ main {
 
 .education {
     justify-content: space-evenly;
+    margin-left: 25px;
 }
 
-.achievements figure {
+.education h3,
+.education h2 {
+    color: var(---primary-color);
+}
+
+
+
+.achievements h1 {
+    color: var(---primary-color);
 
 }
+
 
 /* ---- Iconos Sociales ---- */
 
@@ -497,7 +528,7 @@ main {
 
 @media screen and (min-width: 701px) {
 
-    
+
     header {
         display: flex;
         flex-direction: column;
@@ -590,7 +621,7 @@ main {
     main {
         display: flex;
         flex-direction: column;
-        gap:70px;
+        gap: 70px;
         margin-left: 60px;
     }
 
@@ -608,75 +639,72 @@ main {
 
     }
 
-    /* --------About me------------- */
+    /* --------About me ------------- */
 
+    .about-me {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 170px;
+
+    }
+
+
+
+    /* -----------Skills------------- */
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr 4fr);
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .skills h2 {
+        grid-column: span 2;
+        text-align: start;
+
+    }
+
+    .soft-skills {
+        grid-column: 1;
+        grid-row: 2 / span 2;
+    }
+
+    .soft-skills h3 {
+        padding-bottom: 20px;
+    }
+
+    .soft-skills ul li {
+        padding-bottom: 20px;
+    }
+
+    .hard-skills {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        width: 70%;
+        height: 90%;
+        margin-left: 20%;
+    }
+
+    .slider-skills {
+        height: 80%;
+        width: 70%;
+        margin-left: 20%;
+
+
+    }
+}
+
+
+@media screen and (max-width: 872px) {
     .about-me {
         display: flex;
         flex-direction: column;
-        padding-top: 80px;
-        padding: 50px;   
+        gap: 20px;
+        padding-top: 15px;
+        color: black;
+        margin-left: 25px;
     }
-    
-    .about-me h2 {
-        font-size: 48px;
-        font-family: 'Righteous';
-        text-align: center;
-        padding: 20px;
-
-    
-    }
-    
-    .about-me .contenido-seccion p {
-        font: 18px;
-        line-height: 22px;
-        margin-bottom: 20px;
-    }
-    
-    .about-me .contenido-seccion p span {
-        color: var(---primary-color);
-        font-weight: bold;
-    }
-    
-    .about-me .fila {
-        display: flex;
-        min-width: 10px ;
-    }
-    
-    .about-me .fila .col {
-        width: 100%;
-    }
-    
-    .about-me .fila .col h3 {
-        font-size: 28px;
-        font-family: 'Righteous';
-        margin-bottom: 25px;
-    }
-    
-    
-    .about-me .fila .col ul li strong {
-        display: inline-block;
-        color: var(---primary-color);
-        width: 130px;
-    }
-    
-    
-    .about-me .fila .col .contenedor-intereses {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    
-    
-    .about-me .fila .col .contenedor-intereses .interes:hover {
-        background-color: var(---primary-color);
-    }
-    
-    .about-me .fila .col .contenedor-intereses .interes i {
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
-    
-   
-    
-   
 }
