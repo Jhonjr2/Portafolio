@@ -7,24 +7,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <title>Eventos</title>
     <!-- https://ionic.io/ionicons/usage -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- https://boxicons.com/usage -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!------splide--------->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/themes/splide-skyblue.min.css">
 
 
+
+    <!-----project--- -->
     <script src="./src/js/main.js" defer></script>
-
-    <!-- styles -->
     <link rel="stylesheet" href="./src/css/style.css">
-
     <link rel="icon" type="image/png" sizes="32x32" href="./src/img/logotipo-pestaña.png">
-
-
+    <title>Portafolio</title>
 </head>
 
 <body class="dark">
@@ -36,11 +35,11 @@
         </div>
         <nav class="menu">
             <a href="#1">
-                <ion-icon name="home-outline"></ion-icon> <span>Home</span></a>
+                <ion-icon name="home-outline" ></ion-icon> <span>Inicio</span></a>
             <a href="#2">
-                <ion-icon name="person-outline"></ion-icon><span>About me</span></a>
+                <ion-icon name="person-outline"></ion-icon><span>Sobre mi</span></a>
             <a href="#3">
-                <ion-icon name="construct-outline"></ion-icon><span>Skills</span></a>
+                <ion-icon name="construct-outline"></ion-icon><span>Habilidades</span></a>
             <a href="#4">
                 <ion-icon name="file-tray-full-outline"></ion-icon><span>Proyectos</span></a>
             <a href="#5">
@@ -48,11 +47,11 @@
             <a href="#6">
                 <ion-icon name="ribbon-outline"></ion-icon><span>Logros</span></a>
             <a href="./src/img/Jhon_Esteban Rangel_cv.pdf" download class="download">
-                <ion-icon name="document-text-outline"></ion-icon><span>Download</span></a>
+                <ion-icon name="document-text-outline"></ion-icon><span>Descargar CV</span></a>
 
             <div class="end-icon">
                 <div class="language-icon">
-                    <a href="index-en.html" title="Idioma">
+                    <a href="index-en.html" title="Idioma" class="icon-lenguage">
                         <img src="./src/icon/Assets-portfolio/eng.png" alt="">
                         <!-- <img src="./src/icon/Assets-portfolio/esp.png" alt=""> -->
                     </a>
@@ -89,15 +88,15 @@
                     </p>
                 </div>
                 <div class="icons-home">
-                    <a href="#About-me">
+                    <a href="#2" title="Sobre mi">
                         <ion-icon name="person-outline"></ion-icon><span></span></a>
-                    <a href="#skills">
+                    <a href="#3" title="Habilidades">
                         <ion-icon name="construct-outline"></ion-icon><span></span></a>
-                    <a href="#Proyectos">
+                    <a href="#4" title="Proyectos">
                         <ion-icon name="file-tray-full-outline"></ion-icon><span></span></a>
-                    <a href="#Educación">
+                    <a href="#5" title="Educación">
                         <ion-icon name="school-outline"></ion-icon><span></span></a>
-                    <a href="#Logros">
+                    <a href="#6" title="Logros">
                         <ion-icon name="ribbon-outline"></ion-icon><span></span></a>
                 </div>
             </div>
@@ -194,7 +193,6 @@
         </section>
 
         <!----------- Skills --------->
-        </section>
         <section id="3" class="skills">
             <h2>Habilidades</h2>
             <article class="soft-skills">
@@ -204,6 +202,8 @@
                     <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, minus!</li>
                     <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, minus!</li>
                     <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, minus!</li>
+
                 </ul>
             </article>
             <article class="hard-skills">
@@ -216,17 +216,27 @@
                     <img src="./src/icon/Assets-portfolio/skills/nodejs.png" alt="hard skills">
                     <img src="./src/icon/Assets-portfolio/skills/kotlin.png" alt="hard skills">
                 </figure>
-                <button class="btn-prev"><                        <button class="btn-next">></button>
+                <button class="btn-prev"><</button>
+                <button class="btn-next">></button>
 
             </article>
         </section>
 
         <!-------- Proyectos -------->
-        <section id="4" class="project">
-
+        <section id="4" class="projects">
+            <h2>Proyectos</h2>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 02</li>
+                        <li class="splide__slide">Slide 03</li>
+                    </ul>
+              </div>
+            </div>
         </section>
 
-        <!-------- Educación ------->
+        <!-------- Education ------->
         <section id="5" class="section education">
             <h2>Educación</h2>
             <article class="local-education">
@@ -248,6 +258,9 @@
                 </ul>
             </article>
         </section>
+
+        <!-------- achievements ------->
+
         <section id="6" class="section achievements">
             <h1>Logros Destacados</h1>
             <figure>
@@ -261,16 +274,19 @@
     </main>
 
     <div class="social-icons">
-        <a href="https://www.linkedin.com/in/esteban-rangel-a994a021a/" target="_blank" class="icon-linkedin">
-            <ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://www.linkedin.com/in/esteban-rangel-a994a021a/" target="_blank" class="icon-linkedin" >
+            <ion-icon name="logo-linkedin" ></ion-icon></a>
         <a href="https://github.com/Jhonjr2?tab=repositories" target="_blank" class="icon-github">
             <ion-icon name="logo-github"></ion-icon>
         </a>
 
     </div>
 
-    <footer>
+    <footer> 
+       <div>
 
+       </div>    
+        
     </footer>
 
 </body>

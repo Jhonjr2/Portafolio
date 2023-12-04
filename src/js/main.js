@@ -40,19 +40,19 @@ function skills() {
 
     const prev = document.querySelector('.btn-prev');
     const next = document.querySelector('.btn-next');
-    prev.addEventListener('click', () => { 
+    prev.addEventListener('click', () => {
         clearInterval(interval)
         if (0 < count) {
             count--;
         } else {
-            count = images.length-1;
+            count = images.length - 1;
         }
         let html = `<img src="${images[count]}" alt="hard skills">`;
         skill.innerHTML = html;
     })
     next.addEventListener('click', () => {
         clearInterval(interval)
-        if (count < images.length-1) {
+        if (count < images.length - 1) {
             count++
         } else {
             count = 0;
@@ -61,14 +61,14 @@ function skills() {
         skill.innerHTML = html;
     })
     const interval = setInterval(() => {
-        if (count < images.length-1) {
+        if (count < images.length - 1) {
             count++
         } else {
             count = 0;
         }
         let html = `<img src="${images[count]}" alt="hard skills">`;
         skill.innerHTML = html;
-        
+
     }, 2000);
 
 
@@ -91,17 +91,6 @@ function mode() {
             icon.name = "sunny-outline"
         }
     });
-}
-
-function lenguage() {
-    const languageLink = document.querySelector('.language-icon a');
-        
-        languageLink.addEventListener('click', function (event) {
-            event.preventDefault(); // Evita la navegación predeterminada
-            const targetLanguage = this.getAttribute('href');
-            // Puedes realizar acciones adicionales aquí, como almacenar la preferencia del usuario
-            window.location.href = targetLanguage; // Redirige al archivo HTML en inglés
-        });
 }
 
 function sound() {
@@ -158,17 +147,40 @@ async function getApi() {
     }
 }
 
+function PrintProject(projects) {
+    const list = document.querySelectorAll('.splide__slide');
+
+    projects.forEach((project, i) => {
+        const {descripcion, image, tecnologias, titulo, description, technologies, title} = project;
+
+        const html = ` 
+        <div>
+          <h3>${titulo}</h3>
+          <p>${descripcion}</p>
+          <p>${tecnologias}</p>
+        </div>
+        <figure>
+          <img src="${image}" alt="slider item">
+        </figure>`;
+        list[i].innerHTML = html;
+    });
+}
+
+function slider() {
+    const splide = new Splide('.splide', {
+        type: 'loop'
+    });
+    splide.mount();
+}
 
 async function main() {
     const projects = await getApi();
-    console.log(projects);
     skills()
     menu();
     mode();
     sound();
-    efectoHabilidades();
-
-
+    slider();
+    PrintProject(projects);
 }
 
 main();
