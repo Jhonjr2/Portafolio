@@ -84,13 +84,12 @@ function mode() {
     const icon = document.querySelector('.icon-mode ion-icon')
     const image = document.querySelector('.dark-mode-image');
 
-
     btn.addEventListener('click', () => {
         body.classList.toggle('dark')
         if (icon.name === "sunny-outline") {
-            icon.name = "moon-outline"
+            icon.name = "moon-outline";
         } else {
-            icon.name = "sunny-outline"
+            icon.name = "sunny-outline";
         }
         if(link.getAttribute("href")==="./src/particles/dark.css"){
             link.href= "./src/particles/brigth.css"; 
@@ -101,15 +100,15 @@ function mode() {
 
     image.addEventListener('click', () => {
         body.classList.toggle('dark')
-        if (body.classList.contains('dark')) {
-            // Si está en modo oscuro, cambia la fuente de la imagen oscura
+        if (image.src.includes('lampara-light1.png')) {
             image.src = './src/img/lampara-dark.png';
         } else {
-            // Si está en modo claro, cambia la fuente de la imagen clara
-            image.src = './src/img/lampara-ligth1.png';
+            image.src = './src/img/lampara-light1.png';
         }
     })
 }
+
+
 
 function sound() {
     const btn = document.querySelector('.icon-sound')
