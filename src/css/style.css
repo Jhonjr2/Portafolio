@@ -280,7 +280,6 @@ main {
 }
 
 
-
 /* ---Section 1 Home --- */
 
 .home {
@@ -293,12 +292,15 @@ main {
     margin-bottom: 15px;
     max-height: 1200px;
     position: relative;
+    margin-top: 10%;
 }
+
 .lamp-container {
     position: absolute;
     top: 10px; 
     left: 51.5%; 
     transform: translateX(-50%);
+    width: 80%;
 }
 
 .lamp-container img {
@@ -312,7 +314,7 @@ main {
 }
 
 .home .container {
-    padding-top: 55px;
+    padding-top: 6%;
     background-color: white;
     color: black;
     max-width: 350px;
@@ -723,10 +725,19 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-        padding-top: 55px;
+        gap: 0;
+        margin-top: 0;
 
     }
+
+    .lamp-container {
+        position: absolute;
+        top: 0; 
+        left: 51.5%; 
+        transform: translateX(-50%);
+        width: 40%;
+    }
+    
 
     /* --------About me ------------- */
 
