@@ -87,20 +87,25 @@ function mode() {
 
     const modoClick = () => {
         body.classList.toggle('dark')
-        if (icon.name.includes("sunny-outline")) {
-            icon.name = "moon-outline";
+        if (icon.name.includes("moon-outline")) {
+            icon.name = "sunny-outline";
             image.src = './src/img/lampara-dark.png';
 
         } else {
-            icon.name = "sunny-outline";
+            icon.name = "moon-outline";
             image.src = './src/img/lampara-light1.png';
 
         }
+        image.removeEventListener('click', lamparaClick);
+        image.addEventListener('click', lamparaClick);
+
         if(link.getAttribute("href")==="./src/particles/dark.css"){
             link.href= "./src/particles/brigth.css"; 
         } else {
             link.href= "./src/particles/dark.css";
+
         }
+        
     };
 
     btn.addEventListener('click', modoClick);
