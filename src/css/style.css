@@ -261,6 +261,7 @@ header.active .menu {
     color: white;
 }
 
+
 .dark .icon-linkedin:hover::after,
 .dark .icon-github:hover::after {
     background-color: white;
@@ -291,6 +292,18 @@ main {
     align-items: center;
     margin-bottom: 15px;
     max-height: 1200px;
+    position: relative;
+}
+.lamp-container {
+    position: absolute;
+    top: 10px; 
+    left: 51.5%; 
+    transform: translateX(-50%);
+}
+
+.lamp-container img {
+    max-width: 100%;
+    height: auto;
 }
 
 .dark .home {
@@ -754,7 +767,7 @@ main {
     }
 
     .soft-skills ul li {
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
 
     .hard-skills {
@@ -762,7 +775,7 @@ main {
         grid-row: 3 / span 2;
         width: 80%;
         height: 100%;
-        margin-left: 20%;
+        margin-left: 15%;
         margin-top: -100px;
     }
 

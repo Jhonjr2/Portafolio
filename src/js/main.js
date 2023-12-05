@@ -82,6 +82,8 @@ function mode() {
     const body = document.querySelector('body')
     const btn = document.querySelector('.icon-mode')
     const icon = document.querySelector('.icon-mode ion-icon')
+    const image = document.querySelector('.dark-mode-image');
+
 
     btn.addEventListener('click', () => {
         body.classList.toggle('dark')
@@ -96,6 +98,17 @@ function mode() {
             link.href= "./src/particles/dark.css";
         }
     });
+
+    image.addEventListener('click', () => {
+        body.classList.toggle('dark')
+        if (body.classList.contains('dark')) {
+            // Si está en modo oscuro, cambia la fuente de la imagen oscura
+            image.src = './src/img/lampara-dark.png';
+        } else {
+            // Si está en modo claro, cambia la fuente de la imagen clara
+            image.src = './src/img/lampara-ligth1.png';
+        }
+    })
 }
 
 function sound() {
@@ -136,6 +149,41 @@ function initMap() {
     // Puedes agregar marcadores, líneas, polígonos, etc. según tus necesidades.
 }
 
+function social() {
+    const nav = document.querySelector('.menu');
+    const social = document.querySelector('.social-icons');
+
+    social.classList.toggle('active');
+
+    setTimeout(() => {
+        social.classList.toggle('active');
+    }, 2000);
+
+    nav.addEventListener('click', () => {
+        social.classList.toggle('active');
+
+        setTimeout(() => {
+            social.classList.toggle('active');
+        }, 2000);
+        
+        // Activar la animación para los iconos de GitHub y LinkedIn
+        animateIcons();
+    });
+}
+
+function animateIcons() {
+    const linkedinIcon = document.querySelector('.icon-linkedin');
+    const githubIcon = document.querySelector('.icon-github');
+
+    linkedinIcon.classList.add('animate');
+    githubIcon.classList.add('animate');
+
+    setTimeout(() => {
+        linkedinIcon.classList.remove('animate');
+        githubIcon.classList.remove('animate');
+    }, 2000);
+}
+
 
 
 
@@ -145,7 +193,7 @@ async function getApi() {
     try {
         const data = await fetch(url);
         const res = await data.json();
-        console.log(res);
+        localStorage.setItem('projects', JSON.stringify(res))
         return res;
     } catch (error) {
         console.log(error);
@@ -154,19 +202,32 @@ async function getApi() {
 
 function PrintProject(projects) {
     const list = document.querySelectorAll('.splide__slide');
-
+    const path = location.href.split('/').at(-1).at(0);
     projects.forEach((project, i) => {
         const {descripcion, image, tecnologias, titulo, description, technologies, title} = project;
-
-        const html = ` 
-        <div>
-          <h3>${titulo}</h3>
-          <p>${descripcion}</p>
-          <p>${tecnologias}</p>
-        </div>
-        <figure>
-          <img src="${image}" alt="slider item">
-        </figure>`;
+        let html = '';
+        if (path === 'e') {
+            html = ` 
+            <div>
+              <h3>${title}</h3>
+              <p>${description}</p>
+              <p>${technologies}</p>
+            </div>
+            <figure>
+              <img src="${image}" alt="slider item">
+            </figure>`;
+        }else{
+            html = ` 
+            <div>
+              <h3>${titulo}</h3>
+              <p>${descripcion}</p>
+              <p>${tecnologias}</p>
+            </div>
+            <figure>
+              <img src="${image}" alt="slider item">
+            </figure>`;
+        }
+       
 
         list[i].innerHTML = html;
 
@@ -188,7 +249,8 @@ function slider() {
 }
 
 async function main() {
-    const projects = await getApi();
+    // const data = JSON.parse(localStorage.getItem('projects'))
+    const projects = JSON.parse(localStorage.getItem('projects')) || await getApi();
     console.log(projects);
     PrintProject(projects);
     skills()
@@ -196,6 +258,7 @@ async function main() {
     mode();
     sound();
     slider();
+    social();
    
 }
 
