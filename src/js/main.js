@@ -168,7 +168,13 @@ function PrintProject(projects) {
 
 function slider() {
     const splide = new Splide('.splide', {
-        type: 'loop'
+        type: 'loop',
+        breakpoints: {
+            849: {
+                direction: 'ttb',
+                height: '75vh'
+            },
+        }
     });
     splide.mount();
 }

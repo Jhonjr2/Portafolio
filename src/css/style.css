@@ -511,23 +511,36 @@ main {
 
 /* ----------Section 4 Project--------------- */
 
+.projects {
+    padding: 50px;
+}
+
 .splide {
     padding: 50px;
 }
 
 .splide__slide {
     display: flex;
+    flex-direction: column-reverse;
     gap: 10px;
 }
 
 .splide__slide div {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-evenly;
 }
 
-.splide__slide div p {
-    width: 80%;
+.splide__slide div > * {
+    width: 90%;
+    text-align: center;
+
+}
+
+.splide__slide figure {
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 /* ----------Section 5 Education------------- */
@@ -752,6 +765,12 @@ main {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 5fr;
 
+    }
+
+    .splide__slide {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
     }
 
  /* -----------Education------------- */
