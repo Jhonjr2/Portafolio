@@ -7,31 +7,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <title>Eventos</title>
     <!-- https://ionic.io/ionicons/usage -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- https://boxicons.com/usage -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!------splide--------->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/themes/splide-skyblue.min.css">
 
 
+
+    <!-----project--- -->
     <script src="./src/js/main.js" defer></script>
-
-    <!-- styles -->
     <link rel="stylesheet" href="./src/css/style.css">
-
     <link rel="icon" type="image/png" sizes="32x32" href="./src/img/logotipo-pestaña.png">
-
-
+    <title>Portafolio</title>
 </head>
 
 <body class="dark">
     <header>
+        <iframe src="./particles.html" frameborder="0"></iframe>
 
         <div class="logo">
-            <img src="./src/img/logotipo.png" alt="logo">
+            <img src="./src/img/logotipo2.png" alt="logo">
             <h1>Esteban</h1>
         </div>
         <nav class="menu">
@@ -42,25 +43,28 @@
             <a href="#3">
                 <ion-icon name="construct-outline"></ion-icon><span>Skills</span></a>
             <a href="#4">
-                <ion-icon name="file-tray-full-outline"></ion-icon><span>Project</span></a>
+                <ion-icon name="file-tray-full-outline"></ion-icon><span>Projects</span></a>
             <a href="#5">
                 <ion-icon name="school-outline"></ion-icon><span>Education</span></a>
             <a href="#6">
-                <ion-icon name="ribbon-outline"></ion-icon><span>Achievements</span></a>
+                <ion-icon name="ribbon-outline"></ion-icon><span>achievements</span></a>
             <a href="./src/img/Jhon_Esteban Rangel_cv.pdf" download class="download">
-                <ion-icon name="document-text-outline"></ion-icon><span>Download</span></a>
+                <ion-icon name="document-text-outline"></ion-icon><span>Download CV</span></a>
 
             <div class="end-icon">
-                <a href="index.html" title="Idioma">
-                    <!-- <img src="./src/icon/Assets-portfolio/eng.png" alt=""> -->
-                    <img src="./src/icon/Assets-portfolio/esp.png" alt="">
-                </a>
-                <a class="icon-sound" title="volumen">
+                <div class="language-icon">
+                    <a href="index.html" title="Idioma" class="icon-lenguage">
+                        <!-- <img src="./src/icon/Assets-portfolio/eng.png" alt=""> -->
+                        <img src="./src/icon/Assets-portfolio/esp.png" alt="">
+                    </a>
+                </div>
+
+                <a class="icon-sound" title="volume">
                     <!-- <ion-icon name="volume-high-outline"></ion-icon> -->
                     <ion-icon name="volume-mute-outline"></ion-icon>
                     <audio src="./src/icon/Assets-portfolio/y2mate.com - ARCANO  VIVO POR ELLA.mp3"></audio>
                 </a>
-                <a class="icon-mode" title="Modos">
+                <a class="icon-mode" title="Modes">
                     <!-- <ion-icon name="moon-outline"></ion-icon>  -->
                     <ion-icon name="sunny-outline"></ion-icon>
                 </a>
@@ -86,13 +90,13 @@
                     </p>
                 </div>
                 <div class="icons-home">
-                    <a href="#2" title="about me">
+                    <a href="#2" title="About me">
                         <ion-icon name="person-outline"></ion-icon><span></span></a>
-                    <a href="#3" title="skills">
+                    <a href="#3" title="Skills">
                         <ion-icon name="construct-outline"></ion-icon><span></span></a>
-                    <a href="#4" title="project">
+                    <a href="#4" title="Projects">
                         <ion-icon name="file-tray-full-outline"></ion-icon><span></span></a>
-                    <a href="#5" title="education">
+                    <a href="#5" title="Education">
                         <ion-icon name="school-outline"></ion-icon><span></span></a>
                     <a href="#6" title="achievements">
                         <ion-icon name="ribbon-outline"></ion-icon><span></span></a>
@@ -106,12 +110,13 @@
             <!-- Columna 1 -->
             <div class="col">
                 <h2>About me</h2>
-                <p><span>Hello, my name is Jhon Esteban Rangel.</span> Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Quisquam unde soluta minima necessitatibus, voluptas consectetur vero officiis quas,
+                <p><span>Hello, I'm Jhon Esteban Rangel.</span> Lorem ipsum dolor sit amet consectetur adipisicing
+                    elite Quisquam unde soluta minima necessitatibus, voluptas consectetur vero officiis quas,
                     explicabo deleniti repellendus aliquid debitis maiores numquam voluptate reprehenderit in
-                    delectus dolores.
+                    Delectus pains.
                 </p>
 
+                <!-- datos personales -->
                 <div class="col">
                     <h3>Personal information</h3>
                     <ul>
@@ -133,11 +138,12 @@
                         </li>
                         <li>
                             <strong>Position</strong>
-                            <span>Desarrollador Full Stack</span>
+                            <span>Full Stack Developer</span>
                         </li>
                     </ul>
                 </div>
 
+                <!-- intereses -->
                 <div class="col">
                     <h3>Interests</h3>
                     <div class="contenedor-intereses">
@@ -177,6 +183,7 @@
                 </div>
             </div>
 
+            <!-- Columna 2 -->
             <div class="col map-container">
                 <h3>Location on the Map</h3>
                 <iframe
@@ -186,8 +193,8 @@
             </div>
 
         </section>
-        <!----------- Skills ------------->
-    
+
+        <!----------- Skills --------->
         <section id="3" class="skills">
             <h2>Skills</h2>
             <article class="soft-skills">
@@ -217,9 +224,18 @@
             </article>
         </section>
 
-        <!-------- Project -------->
-        <section id="4" class="project">
-
+        <!-------- Proyectos -------->
+        <section id="4" class="projects">
+            <h2>Projects</h2>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 02</li>
+                        <li class="splide__slide">Slide 03</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-------- Education ------->
@@ -228,30 +244,34 @@
             <article class="local-education">
                 <h3>Academlo:</h3>
                 <ul>
-                    <li>Full stack web development program.</li>
-                    <li>Front-end programmer with React.</li>
-                    <li>Back-end programmer with node.JS.</li>
-                    <li>Fundamentals of programming in html, css and JavaScript.</li>
+                    <li> &#10061 Full stack web development program.</li>
+                    <li> &#10061 Front-end programmer with React.</li>
+                    <li> &#10061 Back-end programmer with node.JS.</li>
+                    <li> &#10061 Fundamentals of programming in html, css and JavaScript.</li>
                 </ul>
             </article>
             <article class="foreign-education">
                 <h3>Others:</h3>
                 <ul>
-                    <li>Communication, customer service and sales skills at Cablenet.</li>
-                    <li>Management of the Microsoft Word, Excel, and PowerPoint office suite in Andec.</li>
-                    <li>Advanced computer typing at Lidez.</li>
-                    <li>Algorithm and logical reasoning.</li>
+                    <li>&#10061 Communication, customer service and sales skills at Cablenet.</li>
+                    <li>&#10061 Management of the Microsoft Word, Excel, Powerpoint office suite in Andec.</li>
+                    <li>&#10061 Advanced computer typing at Lidez.</li>
+                    <li>&#10061 Algorithm and logical reasoning.</li>
                 </ul>
             </article>
         </section>
+
+        <!-------- achievements ------->
+
         <section id="6" class="section achievements">
             <h1>Outstanding Achievements</h1>
             <figure>
                 <img src="./src/icon/Assets-portfolio/aplausos.gif" alt="jr2">
             </figure>
             <p>During my educational process in academia I stood out for always obtaining outstanding grades,
-                for having leadership and working as a team, as well as for encouraging the group to give the best at all times.
-                do their best to be able to pass the programming challenges that were assigned to us as projects.</p>
+                for having leadership and working as a team, as well as for encouraging the group to give the best at
+                all times.
+                do their best to be able to approve the programming challenges that were assigned to us as projects.</p>
         </section>
 
     </main>
@@ -262,11 +282,8 @@
         <a href="https://github.com/Jhonjr2?tab=repositories" target="_blank" class="icon-github">
             <ion-icon name="logo-github"></ion-icon>
         </a>
+
     </div>
-
-    <footer>
-
-    </footer>
 
 </body>
 

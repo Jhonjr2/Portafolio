@@ -108,6 +108,17 @@ header {
     z-index: 20;
 }
 
+header iframe{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    pointer-events: none; 
+    user-select: none;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -118,6 +129,7 @@ header {
     height: auto;
     margin-right: 10px;
     border-radius: 50px 20px 20px;
+    background-color: var(---primary-color);
 }
 
 .logo h1 {
@@ -230,29 +242,30 @@ header.active .menu {
     content: 'Ir al Linkedin';
     font-size: 12px;
     position: absolute;
-    left: -90%; 
+    left: -90%;
     top: 20px;
     background-color: black;
     border-radius: 30px;
-    padding:7px;
+    padding: 7px;
     color: white;
 }
+
 .icon-github:hover::after {
     content: 'Ir a Github';
     font-size: 12px;
     position: absolute;
-    left: -130%; 
+    left: -130%;
     top: 90px;
     background-color: black;
     border-radius: 30px;
-    padding:7px;
+    padding: 7px;
     color: white;
 }
 
 .dark .icon-linkedin:hover::after,
 .dark .icon-github:hover::after {
     background-color: white;
-    color:black;
+    color: black;
     font-size: 12px;
 }
 
@@ -446,7 +459,7 @@ main {
 }
 
 .about-me .col .map-container iframe {
-    width: 60%;
+    width: 100%;
     height: 350px;
 }
 
@@ -532,7 +545,7 @@ main {
     justify-content: space-evenly;
 }
 
-.splide__slide div > * {
+.splide__slide div>* {
     width: 90%;
     text-align: center;
 
@@ -548,7 +561,7 @@ main {
 .education {
     justify-content: space-evenly;
     margin-left: 25px;
-    
+
 }
 
 .education h3,
@@ -759,7 +772,7 @@ main {
         margin-left: 10%;
     }
 
- /* -----------Project----------------- */
+    /* -----------Project----------------- */
 
     .projects {
         grid-template-columns: 1fr;
@@ -773,7 +786,7 @@ main {
         gap: 10px;
     }
 
- /* -----------Education------------- */
+    /* -----------Education------------- */
 
 
     .education {
@@ -786,13 +799,13 @@ main {
     .education h2 {
         grid-column: span 2;
         align-self: self-end;
-        margin-bottom: 45px ;
+        margin-bottom: 45px;
     }
 
     .education article {
         display: flex;
         flex-direction: column;
-        gap:50px
+        gap: 50px
     }
 
     .education li {
@@ -812,7 +825,7 @@ main {
 
     .achievements h1 {
         display: flex;
-        grid-column:span 2;
+        grid-column: span 2;
         margin-bottom: 75px;
     }
 

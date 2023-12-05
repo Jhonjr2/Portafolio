@@ -90,6 +90,11 @@ function mode() {
         } else {
             icon.name = "sunny-outline"
         }
+        if(link.getAttribute("href")==="./src/particles/dark.css"){
+            link.href= "./src/particles/brigth.css"; 
+        } else {
+            link.href= "./src/particles/dark.css";
+        }
     });
 }
 
@@ -162,8 +167,11 @@ function PrintProject(projects) {
         <figure>
           <img src="${image}" alt="slider item">
         </figure>`;
+
         list[i].innerHTML = html;
+
     });
+
 }
 
 function slider() {
@@ -181,12 +189,14 @@ function slider() {
 
 async function main() {
     const projects = await getApi();
+    console.log(projects);
+    PrintProject(projects);
     skills()
     menu();
     mode();
     sound();
     slider();
-    PrintProject(projects);
+   
 }
 
 main();
