@@ -227,7 +227,7 @@ function PrintProject(projects) {
         const {descripcion, image, tecnologias, titulo, description, technologies, title} = project;
         let html = '';
         if (path === 'e') {
-            html = ` 
+            html += ` 
             <div>
               <h3>${title}</h3>
               <p>${description}</p>
@@ -237,7 +237,7 @@ function PrintProject(projects) {
               <img src="${image}" alt="slider item">
             </figure>`;
         }else{
-            html = ` 
+            html += ` 
             <div>
               <h3>${titulo}</h3>
               <p>${descripcion}</p>
