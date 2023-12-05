@@ -60,7 +60,6 @@ img {
 }
 
 .section {
-    height: 100vh;
     padding: 10px 15px 10px;
     display: flex;
     flex-direction: column;
@@ -291,6 +290,7 @@ main {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    max-height: 1200px;
 }
 
 .dark .home {
@@ -559,7 +559,6 @@ main {
 /* ----------Section 5 Education------------- */
 
 .education {
-    justify-content: space-evenly;
     margin-left: 25px;
 
 }
@@ -721,10 +720,12 @@ main {
     .about-me {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 170px;
-
+        gap: 40px;
     }
 
+    .about-me .col p {
+        max-width: 95%;
+    }
 
 
     /* -----------Skills------------- */
@@ -786,19 +787,22 @@ main {
         gap: 10px;
     }
 
+    .splide__slide div > * {
+        max-width: 60%;
+        font-size: 15px;
+    }
+
     /* -----------Education------------- */
 
 
     .education {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr 5fr);
         align-items: center;
     }
 
     .education h2 {
         grid-column: span 2;
-        align-self: self-end;
         margin-bottom: 45px;
     }
 
