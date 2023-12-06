@@ -89,11 +89,11 @@ function mode() {
         body.classList.toggle('dark')
         if (icon.name.includes("moon-outline")) {
             icon.name = "sunny-outline";
-            image.src = './src/img/lampara-dark.png';
-
+            image.src = './src/img/lampara-light1.png';
         } else {
             icon.name = "moon-outline";
-            image.src = './src/img/lampara-light1.png';
+            image.src = './src/img/lampara-dark.png';
+
 
         }
         image.removeEventListener('click', lamparaClick);
