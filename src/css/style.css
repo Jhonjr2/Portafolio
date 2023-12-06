@@ -577,12 +577,12 @@ main {
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
-	display: block;
-	transition: all 0.3s ease;
+    display: block;
+    transition: all 0.3s ease;
 }
 
 .soft-skills li {
-   margin: 15px 0;
+    margin: 15px 0;
 }
 
 .hard-skills {
@@ -680,8 +680,8 @@ main {
 .education h2 {
     color: var(---primary-color);
     font-size: 26px;
-	display: block;
-	transition: all 0.3s ease;
+    display: block;
+    transition: all 0.3s ease;
     margin-bottom: 25px;
 
 }
@@ -689,35 +689,35 @@ main {
 .education h3 {
     color: var(---primary-color);
     font-size: 26px;
-	font-weight: 300;
-	display: block;
-	transition: all 0.3s ease;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
     margin-bottom: 25px;
 
 }
 
-@property --a{
+@property --a {
     syntax: '<angle>';
     inherits: false;
     initial-value: 0deg;
 }
 
-.container-education{  
+.container-education {
     display: flex;
     width: 100%;
     height: 50vh;
     flex-wrap: wrap;
-    margin-top: 35px;
-    gap: 25px; 
+    gap: 5px;
+
 }
 
 
 
-.box{
+.box {
     position: relative;
     width: 200px;
     height: 150px;
-    background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50% );
+    background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
     animation: rotate 4s linear infinite;
     border-radius: 20px;
     filter: drop-shadow(0 15px 50px #000);
@@ -726,35 +726,36 @@ main {
     align-items: start;
 }
 
-.box:nth-child(1){ 
+.box:nth-child(1) {
     filter: drop-shadow(0 15px 50px #000) hue-rotate(190deg);
 }
 
-.box:nth-child(3){ 
+.box:nth-child(3) {
     filter: drop-shadow(0 15px 50px #000) hue-rotate(250deg);
 }
 
-@keyframes rotate{
-    0%{
-        --a:0deg;
+@keyframes rotate {
+    0% {
+        --a: 0deg;
     }
-    100%{
-        --a:360deg;
+
+    100% {
+        --a: 360deg;
     }
 }
 
-.box::before{
+.box::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: repeating-conic-gradient(from var(--a), #45f3ff 0%, #45f3ff 5%, transparent 5%, transparent 40%, #45f3ff 50% );
+    background: repeating-conic-gradient(from var(--a), #45f3ff 0%, #45f3ff 5%, transparent 5%, transparent 40%, #45f3ff 50%);
     animation: rotate 4s linear infinite;
     animation-delay: -0.9s;
     border-radius: 20px;
 }
 
-.box::after{
+.box::after {
     content: '';
     position: absolute;
     inset: 10px;
@@ -763,7 +764,7 @@ main {
     background: #2d2d39;
 }
 
-.box h2{
+.box h2 {
     position: absolute;
     inset: 10px;
     display: flex;
@@ -1022,22 +1023,38 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
+        gap: 25px;
     }
 
     .education h2 {
         grid-column: span 2;
-        margin-bottom: 45px;
+        margin-bottom: 65px;
     }
 
     .education article {
         display: flex;
         flex-direction: column;
-        gap: 50px
+        gap: 10px;
+    }
+
+    .education article .foreign-education{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+    .local-education {
+        margin-top: -28%;
     }
 
     .education li {
-        margin: 10px 0;
-        max-width: 70%;
+        margin: 25px 10px;
+        max-width: 80%;
+        
+    }
+
+    .container-education {
+        margin-top: -25%;
     }
 
     /* -----------achievements--------------- */
