@@ -237,37 +237,6 @@ header.active .menu {
 
 }
 
-.icon-linkedin:hover::after {
-    content: 'Ir al Linkedin';
-    font-size: 12px;
-    position: absolute;
-    left: -90%;
-    top: 20px;
-    background-color: black;
-    border-radius: 30px;
-    padding: 7px;
-    color: white;
-}
-
-.icon-github:hover::after {
-    content: 'Ir a Github';
-    font-size: 12px;
-    position: absolute;
-    left: -130%;
-    top: 90px;
-    background-color: black;
-    border-radius: 30px;
-    padding: 7px;
-    color: white;
-}
-
-
-.dark .icon-linkedin:hover::after,
-.dark .icon-github:hover::after {
-    background-color: white;
-    color: black;
-    font-size: 12px;
-}
 
 
 
@@ -795,23 +764,76 @@ main {
 
 
 .social-icons {
+    width: 90px;
+    aspect-ratio: 1;
+    margin: 20px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    bottom: 0;
+    right: 0;
+    z-index: 30;
 }
 
-.social-icons a {
-    margin-top: 10px;
-    text-decoration: none;
-    color: inherit;
-    font-size: 3em;
+.social-icons .icon {
+    position: absolute;
+    font-size: 40px;
+    width: 35px;
+}
+
+.active .icon-linkedin {
+    top: 0;
+    right: 0;
+    transition: right .5s;
+}
+
+.active .icon-github {
+    bottom: 0;
+    left: 0;
+    transition: bottom .5s;
+}
+
+.icon-linkedin {
+    right: -100px;
+    transition: right .5s;
 }
 
 .icon-github {
-    margin-right: 40px;
+    bottom: -100px;
+    transition: bottom .5s;
+
+}
+
+.social-icons .icon-linkedin:hover::after {
+    content: 'Ir al Linkedin';
+    font-size: 10px;
+    position: absolute;
+    left: -210%;
+    top: 9px;
+    background-color: black;
+    border-radius: 30px;
+    padding: 7px;
+    color: white;
+}
+
+.social-icons .icon-github:hover::after {
+    content: 'Ir al Github';
+    font-size: 10px;
+    position: absolute;
+    left: -180%;
+    top: 9px;
+    background-color: black;
+    border-radius: 30px;
+    padding: 7px;
+    color: white;
+}
+
+
+.dark .icon-linkedin:hover::after,
+.dark .icon-github:hover::after {
+    background-color: white;
+    color: black;
+    position: absolute;
+    font-size: 10px;
+   
 }
 
 

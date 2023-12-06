@@ -186,26 +186,8 @@ function social() {
             social.classList.toggle('active');
         }, 2000);
         
-        // Activar la animación para los iconos de GitHub y LinkedIn
-        animateIcons();
     });
 }
-
-function animateIcons() {
-    const linkedinIcon = document.querySelector('.icon-linkedin');
-    const githubIcon = document.querySelector('.icon-github');
-
-    linkedinIcon.classList.add('animate');
-    githubIcon.classList.add('animate');
-
-    setTimeout(() => {
-        linkedinIcon.classList.remove('animate');
-        githubIcon.classList.remove('animate');
-    }, 2000);
-}
-
-
-
 
 async function getApi() {
     const url = 'https://fundametos-api-porfolios-dev-exsn.2.ie-1.fl0.io/api/v1/projects'
