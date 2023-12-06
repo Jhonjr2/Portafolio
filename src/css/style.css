@@ -107,14 +107,14 @@ header {
     z-index: 20;
 }
 
-header iframe{
+header iframe {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
-    pointer-events: none; 
+    z-index: -1;
+    pointer-events: none;
     user-select: none;
 }
 
@@ -270,6 +270,7 @@ header.active .menu {
 }
 
 
+
 /* ----main------ */
 
 main {
@@ -295,10 +296,12 @@ main {
     margin-top: 10%;
 }
 
+
+
 .lamp-container {
     position: absolute;
-    top: 10px; 
-    left: 51.5%; 
+    top: 10px;
+    left: 51.5%;
     transform: translateX(-50%);
     width: 80%;
 }
@@ -378,6 +381,72 @@ main {
     margin-left: 25px;
 }
 
+.wave-text {
+    display: flex;
+    font-size: 2em;
+    padding: 16px 130px;
+    margin-bottom: 15px;
+}
+
+
+
+@keyframes zoomWave {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+}
+
+/* Agrega clases de animación de Animate.css */
+.wave-text.animate__animated {
+    animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Ajusta los estilos para la animación de fade in */
+.wave-text.animate__fadeIn {
+    animation-name: fadeIn;
+}
+
+.wave-text span {
+    display: inline-block;
+    margin: 0 5px;
+    animation: zoomWave 2s infinite, fadeIn 2s;
+    /* Combina las animaciones */
+}
+
+.wave-text span:nth-child(2),
+.wave-text span:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.wave-text span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+
 .about-me p {
     margin-bottom: 20px;
 }
@@ -388,13 +457,15 @@ main {
 
 .about-me .contenido-seccion {
     margin-left: 8%;
+
 }
 
 .about-me h2 {
     font-size: 48px;
-    font-family: 'Righteous';
+    /* font-family: 'Righteous'; */
     text-align: center;
     padding-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -418,7 +489,6 @@ main {
 
 .about-me .col h3 {
     font-size: 28px;
-    font-family: 'Righteous';
     margin-bottom: 25px;
 }
 
@@ -732,12 +802,12 @@ main {
 
     .lamp-container {
         position: absolute;
-        top: 0; 
-        left: 51.5%; 
+        top: 0;
+        left: 51.5%;
         transform: translateX(-50%);
         width: 40%;
     }
-    
+
 
     /* --------About me ------------- */
 
@@ -811,7 +881,7 @@ main {
         gap: 10px;
     }
 
-    .splide__slide div > * {
+    .splide__slide div>* {
         max-width: 60%;
         font-size: 15px;
     }
