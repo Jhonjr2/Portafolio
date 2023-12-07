@@ -514,15 +514,14 @@ main {
 
 .about-me .col .contenedor-intereses .interes:hover {
     background-color: var(---primary-color);
-    transform: perspective(900px) translateY(-10%) rotateX(25deg) translateZ(0);
+    /* transform: perspective(900px) translateY(-10%) rotateX(25deg) translateZ(0);
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); */
 
 }
 
-
-
+/* 
 .about-me .col .contenedor-intereses .interes:hover .games {
     opacity: 2;
     transform: translate3d(0%, -30%, 100px);
@@ -555,7 +554,7 @@ main {
             transparent 46%,
             rgba(12, 13, 19, 0.5) 68%,
             rgba(12, 13, 19) 97%);
-}
+} */
 
 .about-me .col .map-container iframe {
     width: 100%;
