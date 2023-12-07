@@ -494,7 +494,7 @@ main {
     align-items: center;
     justify-content: center;
     transition: .3s;
-    
+
 }
 
 .about-me .col ul li strong {
@@ -518,7 +518,7 @@ main {
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    
+
 }
 
 
@@ -533,11 +533,29 @@ main {
     opacity: 0;
     transition: all 0.5s;
     position: absolute;
-    top: 15%;
-    z-index: -1;
-    /* object-fit: cover; */
-    /* scale: 200%; */
-  }
+    top: 25%;
+    z-index: 1;
+    object-fit: cover;
+    scale: 200%;
+}
+
+.about-me .col .contenedor-intereses .interes::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to top,
+            transparent 46%,
+            rgba(12, 13, 19, 0.5) 68%,
+            rgba(12, 13, 19) 97%);
+}
+
+.about-me .col .contenedor-intereses .interes::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(to bottom,
+            transparent 46%,
+            rgba(12, 13, 19, 0.5) 68%,
+            rgba(12, 13, 19) 97%);
+}
 
 .about-me .col .map-container iframe {
     width: 100%;
@@ -786,12 +804,12 @@ main {
 }
 
 
-.achievements figure:hover{
+.achievements figure:hover {
     transform: perspective(900px) translateY(-10%) rotateY(25deg) translateZ(0);
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    
+
 }
 
 .achievements:hover p {
@@ -877,7 +895,7 @@ main {
     color: black;
     position: absolute;
     font-size: 10px;
-   
+
 }
 
 
@@ -1103,12 +1121,13 @@ main {
         gap: 10px;
     }
 
-    .education article .foreign-education{
+    .education article .foreign-education {
         display: flex;
         flex-direction: column;
         gap: 20px;
         justify-content: center;
     }
+
     .local-education {
         margin-top: -28%;
     }
@@ -1116,7 +1135,7 @@ main {
     .education li {
         margin: 25px 10px;
         max-width: 80%;
-        
+
     }
 
     .container-education {
