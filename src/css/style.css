@@ -661,18 +661,20 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: -30%;
 }
 
 .splide__slide div>* {
     width: 70%;
     text-align: center;
-    margin-top:15px;
-
+    margin-top:25px;
+    margin-bottom: 15px;
 }
 
 .splide__slide figure {
     border-radius: 20px;
     overflow: hidden;
+    height: 80%;
 
 }
 
