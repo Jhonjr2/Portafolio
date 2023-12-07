@@ -22,6 +22,9 @@ html {
     ---third-color-dark: #252A2E;
     ---mode-ligth: rgb(242, 246, 255);
     ---mode-dark: #1E2326;
+
+    --card-height: 400px;
+    --card-width: calc(var(--card-height) / 1.5);
 }
 
 body {
@@ -491,6 +494,7 @@ main {
     align-items: center;
     justify-content: center;
     transition: .3s;
+    
 }
 
 .about-me .col ul li strong {
@@ -510,7 +514,30 @@ main {
 
 .about-me .col .contenedor-intereses .interes:hover {
     background-color: var(---primary-color);
+    transform: perspective(900px) translateY(-10%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    
 }
+
+
+
+.about-me .col .contenedor-intereses .interes:hover .games {
+    opacity: 2;
+    transform: translate3d(0%, -30%, 100px);
+}
+
+.games {
+    width: 85%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    top: 15%;
+    z-index: -1;
+    /* object-fit: cover; */
+    /* scale: 200%; */
+  }
 
 .about-me .col .map-container iframe {
     width: 100%;
@@ -757,6 +784,23 @@ main {
 .achievements h1 {
     color: var(---primary-color);
 }
+
+
+.achievements figure:hover{
+    transform: perspective(900px) translateY(-10%) rotateY(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    
+}
+
+.achievements:hover p {
+    transform: perspective(900px) translateY(-10%) rotateY(-25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
 
 
 
