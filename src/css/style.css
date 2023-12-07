@@ -342,6 +342,8 @@ main {
 }
 
 
+
+
 /* ---Section 2 About me --- */
 
 .about-me {
@@ -522,6 +524,8 @@ main {
 }
 
 
+
+
 .about-me .col .contenedor-intereses .interes:hover .games {
     opacity: 2;
     transform: translate3d(0%, -30%, 100px);
@@ -667,7 +671,7 @@ main {
 .splide__slide figure {
     border-radius: 20px;
     overflow: hidden;
-    height: 80%;
+    height: 130%;
 
 }
 
@@ -864,10 +868,10 @@ main {
 }
 
 .social-icons .icon-linkedin:hover::after {
-    content: 'Ir al Linkedin';
+    content: 'Linkedin';
     font-size: 10px;
     position: absolute;
-    left: -210%;
+    left: -150%;
     top: 9px;
     background-color: black;
     border-radius: 30px;
@@ -876,10 +880,10 @@ main {
 }
 
 .social-icons .icon-github:hover::after {
-    content: 'Ir al Github';
+    content: 'Github';
     font-size: 10px;
     position: absolute;
-    left: -180%;
+    left: -140%;
     top: 9px;
     background-color: black;
     border-radius: 30px;
