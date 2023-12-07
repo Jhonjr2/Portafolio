@@ -664,8 +664,9 @@ main {
 }
 
 .splide__slide div>* {
-    width: 90%;
+    width: 50%;
     text-align: center;
+    margin-top:15px;
 
 }
 
