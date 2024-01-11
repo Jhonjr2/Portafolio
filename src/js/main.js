@@ -3,8 +3,7 @@ import { mode } from './mode.js'
 import { skills, slider} from './slider.js'
 import { social } from './social.js'
 import {sound} from './sound.js'
-import {PrintProject, initMap} from './print.js'
-import {getApi} from './API.js'
+import {initMap} from './print.js'
 
 
 
@@ -17,8 +16,8 @@ window.scrollTo({
 
 async function main() {
     // const data = JSON.parse(localStorage.getItem('projects'))
-    const projects = JSON.parse(localStorage.getItem('projects')) || await getApi();
-    PrintProject(projects);
+    // const projects = JSON.parse(localStorage.getItem('projects')) || await getApi();
+    // PrintProject();
     skills()
     menu();
     mode();

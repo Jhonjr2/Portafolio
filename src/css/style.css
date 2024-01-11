@@ -642,41 +642,41 @@ main {
 
 /* ----------Section 4 Project--------------- */
 
-.projects h2 {
-    padding: 60px;
+.projects h2{
+    padding: 30px;
 }
 
 .splide {
-    padding: 50px;
+  padding: 30px;
+  margin-bottom: 10px;
 }
 
 .splide__slide {
-    display: flex;
-    flex-direction: column-reverse;
-
+    margin-bottom: 4px;
 }
 
-.splide__slide div {
+.splide a {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    margin-top: -30%;
+    margin-left: 50%;
 }
 
-.splide__slide div>* {
-    width: 70%;
-    text-align: center;
-    margin-top:25px;
-    margin-bottom: 15px;
+.splide__slide img {
+    border-radius: 40px;
+    max-width: 350px;
 }
 
-.splide__slide figure {
-    border-radius: 20px;
-    overflow: hidden;
-    height: 80%;
-
+.splide__slide p {
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
+
+.splide__slide p span {
+    color: var(---primary-color);
+}
+
+
 
 /* ----------Section 5 Education------------- */
 
@@ -1089,22 +1089,29 @@ main {
 
     /* -----------Project----------------- */
 
-    .projects {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 5fr;
 
-    }
 
-    .splide__slide {
+    .splide a {
         display: flex;
-        flex-direction: row;
-        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+        max-width: 70%;
     }
 
-    .splide__slide div>* {
-        max-width: 60%;
-        font-size: 15px;
+    .splide__slide img {
+        border-radius: 40px;
+        max-width: 500px;
     }
+    
+    .splide__slide p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 80%;
+    }
+    
+
+   
 
     /* -----------Education------------- */
 
