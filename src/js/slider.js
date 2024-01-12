@@ -58,7 +58,7 @@ export function slider() {
         breakpoints: {
             849: {
                 direction: 'ttb',
-                height: '195vh'
+                height: '200vh',
             },
         }
     });

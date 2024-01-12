@@ -642,34 +642,18 @@ main {
 
 /* ----------Section 4 Project--------------- */
 
-.projects h2{
+.projects h2 {
     padding: 30px;
-}
-
-.splide {
-  padding: 30px;
-  margin-bottom: 10px;
-}
-
-.splide__slide {
-    margin-bottom: 4px;
-}
-
-.splide a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50%;
 }
 
 .splide__slide img {
     border-radius: 40px;
-    max-width: 350px;
+    max-width: 500px;
 }
 
 .splide__slide p {
     margin-top: 25px;
-    margin-bottom: 20px;
+    max-width: 85%;
 }
 
 .splide__slide p span {
@@ -1089,29 +1073,14 @@ main {
 
     /* -----------Project----------------- */
 
-
-
-    .splide a {
+    .splide {
+        max-width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 30px;
-        max-width: 70%;
-    }
-
-    .splide__slide img {
-        border-radius: 40px;
-        max-width: 500px;
+        gap: 2em;
     }
     
-    .splide__slide p {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        max-width: 80%;
-    }
-    
-
-   
 
     /* -----------Education------------- */
 
