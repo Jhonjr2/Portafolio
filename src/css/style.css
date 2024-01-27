@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
     background-color: var(---mode-ligth);
@@ -258,7 +258,6 @@ main {
 .home {
 
     background-size: calc(30vh);
-    height: 100vh;
     color: #fff;
     display: flex;
     align-items: center;
@@ -536,7 +535,7 @@ main {
     width: 85%;
     opacity: 0;
     transition: all 0.5s;
-    position: absolute;
+    position: fixed;
     top: 25%;
     z-index: -1;
     object-fit: cover;
@@ -909,20 +908,6 @@ a {
 }
 
 
-.achievements figure:hover {
-    transform: perspective(900px) translateY(-10%) rotateY(25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-
-}
-
-.achievements:hover p {
-    transform: perspective(900px) translateY(-10%) rotateY(-25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-}
 
 
 
@@ -1238,7 +1223,7 @@ a {
     .achievements {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr 5fr);
+        grid-template-rows: repeat( 1fr);
         align-items: center;
         margin-left: 15px;
     }
