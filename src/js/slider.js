@@ -49,18 +49,3 @@ export function skills() {
 
 
 
-//Libreria API
-
-export function slider() {
-    const splide = new Splide('.splide', {
-        type: 'loop',
-        perPage: 2,
-        breakpoints: {
-            849: {
-                direction: 'ttb',
-                height: '65vh',
-            },
-        }
-    });
-    splide.mount();
-}
