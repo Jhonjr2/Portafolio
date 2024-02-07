@@ -7,7 +7,7 @@
 export function skills() {
     const skill = document.querySelector('.slider-skills');
     const array = document.querySelectorAll('.slider-skills img')
-
+    
     const images = Array.from(array).map(element => element.getAttribute('src'));
     let count = 0;
     let html = `<img src="${images[count]}" alt="hard skills">`;
@@ -16,6 +16,7 @@ export function skills() {
     const prev = document.querySelector('.btn-prev');
     const next = document.querySelector('.btn-next');
     prev.addEventListener('click', () => {
+
         clearInterval(interval)
         if (0 < count) {
             count--;
@@ -24,6 +25,7 @@ export function skills() {
         }
         let html = `<img src="${images[count]}" alt="hard skills">`;
         skill.innerHTML = html;
+        window.alert(skill.innerText)
     })
     next.addEventListener('click', () => {
         clearInterval(interval)
